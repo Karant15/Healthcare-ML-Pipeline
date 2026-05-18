@@ -9,6 +9,12 @@ Built as a production-ready ML pipeline - not just a notebook.
 
 [Click here to open the live dashboard](https://karan-healthcare-ml.streamlit.app)
 
+<img width="1900" height="902" alt="Screenshot 2026-05-18 190158" src="https://github.com/user-attachments/assets/f8b8646c-2216-4c2e-8e9c-c7371c2f4b41" />
+<img width="1901" height="912" alt="Screenshot 2026-05-18 191021" src="https://github.com/user-attachments/assets/89d88c93-d87f-433f-a749-a6bf5202fefd" />
+<img width="1892" height="897" alt="Screenshot 2026-05-18 191147" src="https://github.com/user-attachments/assets/df1e524f-b81a-4710-b4a2-3965011660ce" />
+<img width="1917" height="895" alt="Screenshot 2026-05-18 191218" src="https://github.com/user-attachments/assets/b9ea6ecf-3615-4c16-a75f-bdff61bc2811" />
+<img width="1907" height="905" alt="Screenshot 2026-05-18 191304" src="https://github.com/user-attachments/assets/0cf3bf99-6669-4a63-9092-0b0e245028a2" />
+
 ---
 
 ## The Problem

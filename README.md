@@ -7,6 +7,7 @@
 <img width="1892" height="897" alt="Screenshot 2026-05-18 191147" src="https://github.com/user-attachments/assets/6cc2de63-8483-428d-8d13-891eef34af68" />
 <img width="1917" height="895" alt="Screenshot 2026-05-18 191218" src="https://github.com/user-attachments/assets/6d60e310-61a7-48c4-b952-fdc5b8731678" />
 <img width="1907" height="905" alt="Screenshot 2026-05-18 191304" src="https://github.com/user-attachments/assets/b0387625-984c-42ac-97bf-47d2eb6858ac" />
+
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
 [![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)](https://xgboost.readthedocs.io)
 [![SHAP](https://img.shields.io/badge/Explainability-SHAP-green)](https://shap.readthedocs.io)

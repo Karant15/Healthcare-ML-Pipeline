@@ -1,215 +1,147 @@
-# Healthcare Readmission Prediction — End-to-End ML Pipeline
+Hi, I'm Karan Trivedi
+MS Data Analytics | Webster University (Dec 2024)
+St Louis, MO | Open to US opportunities (Remote & Relocate) | STEM OPT Active
 
-> Predicting **30-day hospital readmission risk** using real patient data from 130 US hospitals.
-> Built as a production-ready ML pipeline — not just a notebook.
-> <img width="1907" height="905" alt="Screenshot 2026-05-18 191304" src="https://github.com/user-attachments/assets/8b0315f4-024d-420c-8430-61974e862ac8" />
-<img width="1901" height="912" alt="Screenshot 2026-05-18 191021" src="https://github.com/user-attachments/assets/cd904e42-5729-40ef-8290-d766e6d9c817" />
-<img width="1892" height="897" alt="Screenshot 2026-05-18 191147" src="https://github.com/user-attachments/assets/6cc2de63-8483-428d-8d13-891eef34af68" />
-<img width="1917" height="895" alt="Screenshot 2026-05-18 191218" src="https://github.com/user-attachments/assets/6d60e310-61a7-48c4-b952-fdc5b8731678" />
-<img width="1907" height="905" alt="Screenshot 2026-05-18 191304" src="https://github.com/user-attachments/assets/b0387625-984c-42ac-97bf-47d2eb6858ac" />
+What I Do
+I build data-driven solutions that solve real business problems - not just notebooks that sit on a laptop.
+7+ years of combined experience across healthcare, recruitment, and business analytics - including managing data relationships with 30+ NHS hospitals in the UK. Now applying that domain knowledge to data science.
+Lean Six Sigma Black Belt - I don't just find problems in data. I frame them as business solutions.
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
-[![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)](https://xgboost.readthedocs.io)
-[![SHAP](https://img.shields.io/badge/Explainability-SHAP-green)](https://shap.readthedocs.io)
-[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red)](https://streamlit.io)
+Release Schedule - 10 Projects | May-July 2026
+One new project published every other week. Building in public.
+#ProjectTypeStatusLive1Healthcare Workforce Analytics DashboardPython · StreamlitLiveOpen2Supply Chain KPI Dashboard + DMAIC + SQLPython · SQL · StreamlitLiveOpen3Healthcare Readmission ML PipelineXGBoost · SHAP · StreamlitLiveOpen4Supply Chain Power BI DashboardPower BI · DAXBuildingReleasing May 20265SQL Business DashboardSQL · Power BI · TableauUdemy projectReleasing May 20266SQL Healthcare Claims AnalysisSQL · SQLite · PythonPlannedReleasing May 20267HR Analytics DashboardSQL · Power BI · ExcelUdemy projectReleasing June 20268Demand Forecasting + Inventory OptimizerPython · Prophet · StreamlitPlannedReleasing June 20269LLM Business Intelligence ToolLangChain · OpenAI · StreamlitPlannedReleasing June 202610Cricket Analytics DashboardPython · Plotly · StreamlitPlannedReleasing July 2026
 
----
+Featured Projects
+Healthcare Workforce Analytics Dashboard - LIVE
 
-## 🔴 Live Dashboard
+Analyzed 9.6M real US Medicare records to identify physician staffing gaps across all 50 states
 
-👉 **[http://localhost:8501/](#)** ← *(link updated after deployment)*
 
----
+Processed 1.1M unique providers across 104 medical specialties
+Built interactive 5-tab Streamlit dashboard with US choropleth maps
+Applied Lean Six Sigma DMAIC framework to structure recruitment gap analysis
+Identified Wyoming (97.7%), Vermont and Alaska as most critically underserved states
+Full analysis run locally on 9.6M records - dashboard shows 50k representative sample
+Live: https://karan-healthcare-analytics.streamlit.app
+Stack: Python · Pandas · Plotly · Streamlit · CMS Medicare Data
 
-## The Problem
 
-Hospital readmissions cost the US healthcare system **$26 billion annually**.
-Medicare penalizes hospitals with high readmission rates — up to 3% of total payments.
+Healthcare Readmission ML Pipeline - LIVE
 
-The question this pipeline answers:
+End-to-end ML pipeline predicting 30-day hospital readmission risk - 101,745 real patient records
 
-> *"At the moment of discharge, which patients are most likely to return within 30 days — and why?"*
 
-If care teams know this at discharge, they can intervene — follow-up calls,
-medication reviews, home visits — before the readmission happens.
+Trained and compared 4 models: Logistic Regression, Random Forest, Gradient Boosting, XGBoost
+XGBoost selected with ROC-AUC 0.598 - best balance for imbalanced medical data
+SMOTE oversampling to handle 11.2% minority class - training set balanced to 144,628 samples
+SHAP explainability - shows doctors exactly why the model flags a patient as high risk
+Live patient risk predictor with gauge chart and clinical recommendations
+Live: https://karan-healthcare-ml.streamlit.app
+Stack: Python · XGBoost · SHAP · SMOTE · Streamlit · UCI Diabetes Dataset
 
----
 
-## Why I Built This As A Pipeline — Not Just A Notebook
+Supply Chain KPI Dashboard + DMAIC + SQL - LIVE
 
-Most data science students train a model in a Jupyter notebook and stop there.
-That is not how ML works in production.
+Analyzed 180,519 real orders - found that 57% of deliveries are late across 23 global regions
 
-A real ML pipeline has:
-- **Reproducible data cleaning** — same steps every time, documented
-- **Feature engineering** — domain knowledge turned into model inputs
-- **Multiple models compared** — not just one guess
-- **Imbalance handling** — real medical data is always skewed
-- **Explainability** — doctors cannot trust a black box
-- **Deployment** — a model nobody can use is worthless
 
-This project has all six. That is the difference between a portfolio piece
-and production-ready work.
+Only 42.7% on-time delivery rate - Central Africa worst at 60.7% late rate
+15 SQL queries via SQLite - late rate by region, revenue by category, customer segments
+ABC inventory segmentation identifying Class A products driving 80% of revenue
+Full DMAIC Six Sigma structured analysis - Define through Control
+Full analysis on 180,519 orders locally - dashboard runs on 50k representative sample
+Live: https://karan-supply-chain.streamlit.app
+Stack: Python · SQL · SQLite · Plotly · Streamlit · DMAIC
 
----
 
-## The Data
+Supply Chain Power BI Dashboard - BUILDING
 
-**UCI Diabetes 130-US Hospitals Dataset (1999-2008)**
-- 101,766 real patient encounters
-- 130 US hospitals
-- 50 features per patient
-- Target: readmitted within 30 days
+Same 180,519 order dataset rebuilt in Power BI - demonstrating Microsoft stack proficiency
 
-**The challenge:** Only 11.2% of patients were readmitted within 30 days.
-This class imbalance means a naive model that predicts "not readmitted"
-for everyone gets 88.8% accuracy — but catches zero actual readmissions.
-That is clinically useless.
 
----
+4-page interactive report: Executive Summary, Delivery Performance, Revenue, ABC Inventory
+DAX measures for KPI calculations - On-Time Rate, Late Orders, Total Revenue, Avg Margin
+Designed for business stakeholders - not just technical audiences
+Stack: Power BI · DAX · DataCo Supply Chain Dataset
 
-## The Pipeline — Step By Step
 
-### Step 1 — Data Cleaning
-- Replaced `?` with NaN — this dataset uses `?` for missing values
-- Dropped columns with >40% missing: weight (96.9% missing), payer_code, medical_specialty
-- Removed duplicate patient encounters — kept first visit only
-- Created binary target: readmitted within 30 days = 1, otherwise = 0
+Human Capital Analysis
 
-### Step 2 — Feature Engineering
-20 features engineered from the raw 50 columns:
+Predicting employee turnover to reduce hiring costs
 
-| Feature | How Created | Why It Matters |
-|---------|-------------|----------------|
-| age_numeric | Converted age ranges to midpoint values | Models need numbers not strings |
-| num_meds_changed | Count of medications adjusted during visit | Medication instability = higher risk |
-| on_insulin | Binary flag from insulin column | Insulin dependency signals severity |
-| diag_1_group | Grouped 900+ ICD codes into 9 categories | Reduces noise, captures clinical meaning |
-| number_inpatient | Prior inpatient visits | Strongest predictor of readmission |
 
-### Step 3 — Handling Class Imbalance with SMOTE
-With only 11.2% positive cases, standard training ignores the minority class.
+Analyzed 15,000+ employee records using Logistic Regression and Decision Trees
+Achieved 90% prediction accuracy - job satisfaction identified as top turnover driver
+Recommended strategies projected to reduce turnover by 20%
+Stack: R · Logistic Regression · Decision Trees · k-NN · SVM
+Repo: Human-Capital-Analysis
 
-**SMOTE** (Synthetic Minority Oversampling Technique) creates synthetic examples
-of the minority class in the training set — balancing it to 50/50 without
-losing real data in the test set.
 
-Result: Training set grew from 81,396 to 144,628 samples — all real test data preserved.
+Bank Loan Risk Model
 
-### Step 4 — Training 4 Models
+Loan default prediction reducing misclassification cost by $3M
 
-| Model | Accuracy | ROC-AUC | Sensitivity |
-|-------|----------|---------|-------------|
-| Logistic Regression | 67.0% | 0.544 | 35.3% |
-| Random Forest | 84.4% | 0.597 | 12.7% |
-| Gradient Boosting | 77.2% | 0.584 | 25.2% |
-| **XGBoost** | **79.7%** | **0.598** | **22.0%** |
 
-**Why XGBoost won:**
-ROC-AUC is the right metric for imbalanced medical data — it measures
-how well the model separates high-risk from low-risk patients regardless
-of threshold. Random Forest had higher accuracy (84.4%) but catastrophically
-low sensitivity (12.7%) — it missed 87% of actual readmissions.
-XGBoost provided the best balance for clinical use.
+Built Logistic Regression and Decision Tree models on 5,960 loan applicants
+Improved sensitivity to 80.65%, reducing false negatives
+Demonstrated $3M cost reduction through optimized approval strategy
+Stack: R · Logistic Regression · Decision Trees
+Repo: Bank-Loan-Decision-Making-Analysis
 
-### Step 5 — SHAP Explainability
-SHAP (SHapley Additive exPlanations) answers the question doctors actually ask:
-*"Why did you flag this patient as high risk?"*
 
-Without explainability, no clinical team will trust or adopt the model.
-SHAP breaks down each prediction into individual feature contributions —
-making the black box transparent.
+Consumer Segmentation Analysis
 
-**Key finding from SHAP:** `number_inpatient` (prior hospital stays) is the
-strongest predictor of readmission — consistent with clinical literature.
+Customer segmentation and brand loyalty prediction
 
----
 
-## Why Streamlit For Deployment
+Segmented 600 consumer profiles using K-Means clustering
+Applied Random Forest and Logistic Regression for brand loyalty prediction
+Built for AXANTEUS market research agency
+Stack: R · K-Means · Random Forest · Logistic Regression
+Repo: Consumer-Segmentation-Analysis
 
-Every project I build gets deployed as a live interactive tool — not just code.
 
-**The reasoning:**
-- A model nobody can use has zero business value
-- Recruiters and hiring managers can test it themselves — no setup required
-- It demonstrates the full stack: data → model → interface → deployment
-- Healthcare teams need a UI — they are not running Python scripts
+Currently Learning
+CoursePlatformSectionTargetData Analysis: SQL · Power BI · Tableau · ExcelUdemySQL sectionMay 2026Google Data Analytics Professional CertificateCourseraWeek 4May 2026Microsoft PL-300 Power BI AssociateMicrosoft LearnAfter Power BI sectionJune 2026Unilever Supply Chain AnalyticsCourseraWeek 7June 2026
 
-Streamlit lets me go from trained model to live web app in hours.
-FastAPI adds a programmatic endpoint so other systems can query the model via API.
+Tech Stack
+Languages:        Python · R · SQL
+Visualization:    Plotly · Streamlit · Power BI · Tableau · Seaborn
+ML/Analytics:     Scikit-learn · XGBoost · SHAP · Logistic Regression · Decision Trees
+                  Random Forest · Clustering · Time Series · Predictive Modeling
+Imbalance:        SMOTE (imbalanced-learn)
+Database:         SQL · SQLite · MySQL · Excel (Advanced) · DAX
+AI/LLM:           LangChain · OpenAI API (coming soon)
+Process:          Lean Six Sigma Black Belt · DMAIC · SIPOC · RCA · FMEA
+Domain:           Healthcare Analytics · Supply Chain · Recruitment Analytics
 
-This combination — Streamlit for humans, FastAPI for machines — mirrors
-real production ML architecture.
+Certifications
 
----
+Lean Six Sigma Black Belt - Benchmark Six Sigma (2021)
+Lean Six Sigma Green Belt - Benchmark Six Sigma (2021)
+MS Data Analytics - Webster University, St Louis (Dec 2024) | GPA 3.31
+Google Data Analytics - Coursera (in progress)
+Microsoft PL-300 Power BI - Microsoft Learn (in progress)
 
-## 📁 Project Structure
 
-```
-healthcare-ml-pipeline/
-│
-├── data/
-│   ├── diabetic_data.csv          ← full dataset (not uploaded)
-│   └── diabetic_sample.csv        ← 5k sample for cloud deployment
-│
-├── models/
-│   ├── best_model.pkl             ← trained XGBoost model
-│   ├── feature_names.pkl          ← feature list for inference
-│   └── columns.pkl                ← column order for API
-│
-├── outputs/
-│   ├── roc_curve_comparison.png   ← all 4 models compared
-│   ├── feature_importance.html    ← interactive importance chart
-│   ├── shap_summary.png           ← SHAP explainability plot
-│   └── confusion_matrix.png       ← XGBoost confusion matrix
-│
-├── ml_pipeline.py     ← full training pipeline
-├── dashboard.py       ← Streamlit dashboard
-├── requirements.txt
-└── README.md
-```
+Experience Highlights
+Senior Accounts Manager - ID Medical LLP (Healthcare Staffing, UK)
+Managed data relationships with 30+ NHS hospitals · Improved forecasting accuracy 25% · 15% YoY revenue growth
+Senior Recruitment Consultant - QX KPO Services
+453 shifts booked in one month · £25,000 revenue · Led 4-member analytics team
+International Peer Mentor & Writing Coach - Webster University
+CRLA Level 2 Certified · Improved student outcomes 94%
 
----
+Target Roles
+Open to Healthcare Analyst · Supply Chain Analyst · Data Analyst · Business Analyst roles
+St Louis, MO · Remote · Open to relocate within US
 
-## 🚀 How To Run Locally
+Let's Connect
+krntrivedi@gmail.com
+LinkedIn
+Healthcare Dashboard
+Supply Chain Dashboard
+ML Pipeline
+GitHub
 
-```bash
-git clone https://github.com/Karant15/Healthcare-ML-Pipeline.git
-cd Healthcare-ML-Pipeline
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-
-# Download dataset from Kaggle (link below) → place in /data folder
-
-# Run the ML pipeline
-python ml_pipeline.py
-
-# Launch the dashboard
-streamlit run dashboard.py
-```
-
----
-
-## 📄 Data Source
-
-**UCI Diabetes 130-US Hospitals Dataset**
-- Kaggle: https://www.kaggle.com/datasets/brandao/diabetes
-- Records: 101,766 patient encounters × 50 features
-- Hospitals: 130 US hospitals | Years: 1999-2008
-- License: Open — UCI ML Repository
-
----
-
-## 👤 About
-
-**Karan Trivedi** | MS Data Analytics, Webster University (Dec 2024)
-- Lean Six Sigma Black Belt — Benchmark Six Sigma (2021)
-- 7+ years healthcare, recruitment, and business analytics
-- Former Senior Accounts Manager — 30+ NHS hospital accounts
-
-📧 krntrivedi@gmail.com
-🔗 [LinkedIn](https://www.linkedin.com/in/karan-r-trivedi-b9a96a56)
-🏥 [Healthcare Dashboard](https://karan-healthcare-analytics.streamlit.app)
-🚚 [Supply Chain Dashboard](https://karan-supply-chain.streamlit.app)
-🐙 [GitHub](https://github.com/Karant15)
+10 projects in progress. One new deployment every 2 weeks. Check back soon.

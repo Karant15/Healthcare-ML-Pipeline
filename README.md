@@ -3,9 +3,10 @@
 > Predicting **30-day hospital readmission risk** using real patient data from 130 US hospitals.
 > Built as a production-ready ML pipeline — not just a notebook.
 > <img width="1907" height="905" alt="Screenshot 2026-05-18 191304" src="https://github.com/user-attachments/assets/8b0315f4-024d-420c-8430-61974e862ac8" />
-
-
-
+<img width="1901" height="912" alt="Screenshot 2026-05-18 191021" src="https://github.com/user-attachments/assets/cd904e42-5729-40ef-8290-d766e6d9c817" />
+<img width="1892" height="897" alt="Screenshot 2026-05-18 191147" src="https://github.com/user-attachments/assets/6cc2de63-8483-428d-8d13-891eef34af68" />
+<img width="1917" height="895" alt="Screenshot 2026-05-18 191218" src="https://github.com/user-attachments/assets/6d60e310-61a7-48c4-b952-fdc5b8731678" />
+<img width="1907" height="905" alt="Screenshot 2026-05-18 191304" src="https://github.com/user-attachments/assets/b0387625-984c-42ac-97bf-47d2eb6858ac" />
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
 [![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)](https://xgboost.readthedocs.io)
 [![SHAP](https://img.shields.io/badge/Explainability-SHAP-green)](https://shap.readthedocs.io)
@@ -15,7 +16,7 @@
 
 ## 🔴 Live Dashboard
 
-👉 **[Click here to open the live dashboard](#)** ← *(link updated after deployment)*
+👉 **[http://localhost:8501/](#)** ← *(link updated after deployment)*
 
 ---
 
